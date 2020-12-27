@@ -1,0 +1,7 @@
+[gd_resource type="NativeScript" load_steps=2 format=2]
+
+[ext_resource path="res://bin/v4l2cr.gdnlib" type="GDNativeLibrary" id=1]
+
+[resource]
+class_name = "Screen"
+library = ExtResource( 1 )
