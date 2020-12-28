@@ -136,6 +136,20 @@ void Screen::_process(float delta){
 //			bufferWriter[(WIDTH * 3) * i + 3 * j + 3] = (((r < 0) ? 0 : r) > 255) ? 255 : r;
 //			bufferWriter[(WIDTH * 3) * i + 3 * j + 4] = (((g < 0) ? 0 : g) > 255) ? 255 : g;
 //			bufferWriter[(WIDTH * 3) * i + 3 * j + 5] = (((b < 0) ? 0 : b) > 255) ? 255 : b;
+
+			// See also http://v4l.videotechnology.com/dwg/v4l2api/v4l2fmt.htm
+//			uint8_t y1 = (255 / 219) * (_frame[(WIDTH * 2) * i + 2 * j    ] - 16);
+//			int8_t u   = (127 / 112) * (_frame[(WIDTH * 2) * i + 2 * j + 1] - 128);
+//			uint8_t y2 = (255 / 219) * (_frame[(WIDTH * 2) * i + 2 * j + 2] - 16);
+//			int8_t v   = (127 / 112) * (_frame[(WIDTH * 2) * i + 2 * j + 3] - 128);
+
+//			bufferWriter[(WIDTH * 3) * i + 3 * j]     = y1             + 1.402 * v;
+//			bufferWriter[(WIDTH * 3) * i + 3 * j + 1] = y1 - 0.344 * u - 0.714 * v;
+//			bufferWriter[(WIDTH * 3) * i + 3 * j + 2] = y1 + 1.772 * u;
+
+//			bufferWriter[(WIDTH * 3) * i + 3 * j + 3] = y2             + 1.402 * v;
+//			bufferWriter[(WIDTH * 3) * i + 3 * j + 4] = y2 - 0.344 * u - 0.714 * v;
+//			bufferWriter[(WIDTH * 3) * i + 3 * j + 5] = y2 + 1.772 * u;
 		}
 	}
 
